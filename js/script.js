@@ -28,3 +28,20 @@ $(function () {
     return false;
   });
 });
+
+
+// タブボタンをすべて取得
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+tabButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // すべてのボタンとパネルから "active" を削除
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+    tabPanels.forEach(panel => panel.classList.remove('active'));
+
+    // クリックされたボタンと対応するパネルを "active" に
+    button.classList.add('active');
+    document.getElementById(button.dataset.target).classList.add('active');
+  });
+});
