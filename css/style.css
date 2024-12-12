@@ -153,6 +153,7 @@ h2.title {
  共通
 ---------------------------------*/
 
+/* 共通ボタン */
 .n-btn {
   background-color: #fc6621;
   margin: 3em auto;
@@ -169,6 +170,29 @@ h2.title {
 
 section:nth-child(even) {
   background-color: #EDF1F2;
+}
+
+/* 2カラム　共通設定 */
+.skill-list,
+.about-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -50px;
+}
+
+.skill-item,
+.about-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 48%;
+  margin-bottom: 50px;
+}
+
+.skill-body,
+.about-body {
+  flex: 1;
 }
 
 
@@ -213,20 +237,6 @@ section:nth-child(even) {
 /*--------------------------------
  Skill
 ---------------------------------*/
-.skill-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: -50px;
-}
-
-.skill-item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 48%;
-  margin-bottom: 50px;
-}
 
 .skill-img {
   width: 60px;
@@ -239,13 +249,18 @@ section:nth-child(even) {
   margin-bottom: 1em;
 }
 
-.skill-body {
-  flex: 1;
-}
-
 .skill-name {
   margin-bottom: 3px;
 }
+
+/*--------------------------------
+ Skill
+---------------------------------*/
+
+.about-body p {
+  margin-bottom: 1em;
+}
+
 
 /*--------------------------------
  Contact
