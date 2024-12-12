@@ -266,7 +266,9 @@ section:nth-child(even) {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2em;
 }
 .tab-button {
   background-color: #fff;
