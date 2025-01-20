@@ -291,6 +291,10 @@ a:hover::after {
   margin-right: auto;
 }
 
+.bill-text p{
+  text-align: center;
+}
+
 
 
 /*--------------------------------
@@ -702,6 +706,11 @@ a:hover::after {
   .bill-text {
     width: 95%;
   }
+
+  .bill-text p{
+    text-align: inherit;
+  }
+  
 
 
   /* Works */
