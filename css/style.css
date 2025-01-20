@@ -39,29 +39,104 @@ li {
   padding: 80px 0;
 }
 
+/* セクション色分け */
+section:nth-child(even) {
+  background-color: #EDF1F2;
+}
+
+section:nth-child(odd) {
+  background-image: url(../img/bg-sozai.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+}
+
+/* インナー設定 */
 .inner {
   max-width: 1340px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
+
 /*--------------------------------
  見出し
 ---------------------------------*/
+h1.header-logo {
+  display: inline-block;
+  align-items: center;
+}
+
 h2.title {
   font-size: 34px;
   font-weight: normal;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 40px;
+  padding-bottom: 0.5em;
   letter-spacing: .05em;
   color: #333;
-  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+h2.title::before {
+  position: absolute;;
+  content: '';
+  top: 100%;
+  width: 10%;/*線の長さ*/
+  height: 5px;/*線の太さ*/
+  border-radius: 2px;/*線の角を丸くする*/
+  background-color: #42B4E7;/*線の色*/
 }
 
 .lead {
   margin-bottom: 30px;
 }
+
+h3{
+  font-size: 21px;
+  position: relative;
+  padding: .3em 0;
+}
+/* h3::before,
+h3::after {
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+}
+h3::before{
+  top: 2px;
+  left: -18px;
+  width: 12px;
+  height: 12px;
+  background-color: #42B4E7;
+  z-index: -2;
+}
+h3::after{
+  top: 3px;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  background-color: #EDF1F2;
+  opacity: .8;
+  z-index: -1;
+} */
+
+/* 見出し　span */
+.mds {
+  font-size: 16px;
+  display: block;
+  font-weight: bold;
+}
+
+.mds2 {
+  font-size: 14px;
+  display: block;
+  font-weight: bold;
+}
+
 
 /*--------------------------------
 ヘッダー
@@ -142,27 +217,81 @@ a:hover::after {
 
 .bill-body {
   width: 50%;
-  padding-right: 3%;
-  padding-left: 10%;
+  padding-right: auto;
+  padding-left: auto;
 }
 
 .bill-img {
   width: 50%;
-  height: 95vh;
+  height: 84vh;
   background-image: url(../img/mv.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 縦方向に中央揃え */
+  align-items: left; /* 横方向に中央揃え */
+  position: relative;
 }
 
+.bill-img div {
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(44, 62, 80, 0.7);
+  margin: 10px 0; /* 各帯の間隔 */
+  padding: 10px 20px; /* 帯内の余白 */
+  position: relative;
+  font-family: Noto Sans JP；
+}
+
+.bill-img div:nth-child(1) {
+  margin: 10px 0; /* 各帯の間隔 */
+  padding: 10px 20px; /* 帯内の余白 */
+  width: 85%;
+  position: relative;
+}
+
+.bill-img div::before {
+  content: '\f14a';
+  font-family: 'Font Awesome 6 Free';
+  padding: 0 7px 0 0
+}
+
+.bill-img div:nth-child(2) {
+  margin: 10px 0 3em; /* 各帯の間隔 */
+  padding: 10px 20px; /* 帯内の余白 */
+  width: 65%;
+}
+
+
+
 .bill-title {
+  /* background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; */
+}
+
+.bill-title p {
   font-size: 42px;
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
   letter-spacing: .05em;
   color: #2C3E50;
+  text-align: center;
 }
+
+.bill-text {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 /*--------------------------------
  共通
@@ -189,9 +318,6 @@ a:hover::after {
   color: #fff;
 }
 
-section:nth-child(even) {
-  background-color: #EDF1F2;
-}
 
 /* 2カラム　共通設定 */
 .skill-list,
@@ -227,18 +353,52 @@ section:nth-child(even) {
 }
 
 .works-item {
+  position: relative; /* 疑似要素を正しく配置するため */
   width: 31.74603%;
   margin-right: 1.58730%;
   margin-bottom: 40px;
   color: #333;
+  border: 1px solid #ddd; /* 枠線を追加 */
+  padding-bottom: 15px; /* 枠と内容の間に余白を追加 */
+  box-sizing: border-box; /* パディングを含めたサイズを維持 */
+  background-color: #fff; /* 背景色を設定 */
+  transition: transform 0.3s ease; /* ホバー効果用 */
 }
 
+.works-item::before {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  /* ラベルのデザイン */
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  z-index: 0;
+}
+
+.works-item.category-web::before {
+  content: 'Web Design'; /* Webカテゴリー用ラベル */
+  background-color: #2C3E50;
+}
+
+.works-item.category-other::before {
+  content: 'Other Design'; 
+  background-color: #42B4E7;
+}
+
+
 .works-item:hover {
-  opacity: .9;
+  transform: scale(1.05); /* ホバー時の拡大 */
 }
 
 .works-item:nth-of-type(3n) {
   margin-right: 0;
+}
+
+.works-item div p {
+  margin-left: 10px;
 }
 
 .works-img img {
@@ -294,6 +454,9 @@ section:nth-child(even) {
 
 .tab-panel.active {
   display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1em;
+  padding: 2em;
 }
 
 /* スキル一覧の設定 */
@@ -316,12 +479,32 @@ section:nth-child(even) {
   margin-bottom: 1em;
 }
 
+.about-br {
+  margin-top: 3em;
+}
 
 
+/*--------------------------------
+ Works
+---------------------------------*/
+
+.about-item {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 1em;
+}
 
 /*--------------------------------
  Contact
 ---------------------------------*/
+
+.contact-txtbox {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1em;
+  padding: 2em;
+}
+
 .contact-item:not(:last-child) {
   margin-right: 10px;
 }
@@ -329,6 +512,7 @@ section:nth-child(even) {
 .contact-text {
   margin-top: 10px;
 }
+
 /*--------------------------------
  ページトップ
 ---------------------------------*/
@@ -418,9 +602,19 @@ section:nth-child(even) {
   text-align: center;
 }
 
+/*media PCsize 1024
+----------------------------------------------------*/
+@media screen and (min-width: 1024px) {
+  .works .inner,
+  .skill .inner,
+  .about .inner,
+  .contact .inner {
+    padding: 0 9em;
+  }
 
+}
 
-/*media TBsize 767
+/*media SPsize 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {
   body {
@@ -437,9 +631,9 @@ section:nth-child(even) {
   }
 
   /* 見出し */
-  .title {
+  h2.title {
     font-size: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 2em;
   }
 
   /* レイアウト */
@@ -479,16 +673,36 @@ section:nth-child(even) {
     padding-left: 8%;
   }
 
+  /* 右側ビルボ設定 */
   .bill-img {
     width: 100%;
-    height: 67vh;
+    height: 53vh;
     margin-bottom: 20px;
     background-image: url(../img/sp_mv.jpg);
   }
 
-  .bill-title {
-    font-size: 32px;
+  .bill-img div {
+    font-size: 16px;
   }
+  
+  .bill-img div:nth-child(1) {
+    width: 97%;
+  }
+    
+  .bill-img div:nth-child(2) {
+    width: 73%;
+  }
+
+  /* ビルボタイトル */
+  .bill-title p {
+    font-size: 32px;
+    margin: 1em auto;
+  }
+
+  .bill-text {
+    width: 95%;
+  }
+
 
   /* Works */
   .works-name {
@@ -531,7 +745,7 @@ section:nth-child(even) {
   display: block;
   width: 100%;
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 .tab-button {
   display: block;
@@ -541,23 +755,20 @@ section:nth-child(even) {
   text-align: center;
 }
 
-
-
+/* about */
+.about-br {
+  margin-top: 35px;
+}
 
   /* フッター */
   .footer {
     padding: 20px;
   }
-}
 
-/*media TBsize 767
-----------------------------------------------------*/
-@media screen and (max-width: 767px) {
-
-.footer-nav-list {
-  width: 100%;
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
-}
-
+  .footer-nav-list {
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+  }
+  
 }
