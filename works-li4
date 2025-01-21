@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='Shiohara’s Portfolio'>
+  <meta property='og:url' content='URLが入る'>
+  <meta property='og:description' content='塩原ありすのポートフォリオです。Webデザインからフライヤーデザインまで様々なニーズにお答えいたします。'>
+  <meta property="og:image" content="img/ogp.png">
+  <meta name="description" content="塩原ありすのポートフォリオです。Webデザインからフライヤーデザインまで様々なニーズにお答えいたします。" />
+  <title>Shiohara’s Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <link rel=”canonical” href=”URLが入る” />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- header -->
+    <header class="header ">
+      <div class="header-inner">
+        <h1 class="header-logo">
+          <a href="index.html">Shiohara’s Portfolio</a>
+        </h1>
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-item"><a href="index.html#works">WORKS</a></li>
+            <li class="header-nav-item"><a href="index.html#skill">SKILL</a></li>
+            <li class="header-nav-item"><a href="index.html#about">ABOUT</a></li>
+            <li class="header-nav-item"><a href="index.html#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-inner">
+          <h2 class="title">WORKS</h2>
+          <p class="article-img">
+            <img src="img/akiya-banner1.jpg" alt="" width="250px" height="300px">
+          </p>
+          <div class="article-body">
+            <h3 class="article-title">空き家買取バナー</h2>
+            <p>
+              架空の業者の空き家買取サービスのバナーです。
+            </p>
+            <p>デザイン（Illustrator・Photoshop）</p>
+            <h3 class="article-info-title">目的</h3>
+            <p>空き家問題や相続問題などに困っている家主をターゲットにお問い合わせを増やすため</p>
+            <h3 class="article-info-title">ターゲット</h3>
+            <p>50代以降の中年層</p>
+            <h3 class="article-info-title">デザインについて</h3>
+            <p>
+              サービスが浸透していない、ターゲット層が限られているため、空き家問題で考えられる例をデザインに入れ込みました。<br>
+              また、高額な取引が予想されますので、安心感を与えられるようバナーで使用した女性の写真は比較的落ち着いた30代ぐらいの女性を選んでおります。
+            </p>
+          </div>
+
+          <div class="article-inner">
+            <p class="article-img">
+              <img src="img/banner2.jpg" alt="" width="250px" height="300px">
+            </p>
+            <div class="article-body">
+              <h3 class="article-title">医療脱毛バナー</h2>
+              <p>
+                架空の業者の医療脱毛の案内のバナーです。
+              </p>
+              <p>デザイン（Illustrator・Photoshop）</p>
+              <h3 class="article-info-title">目的</h3>
+              <p>医療脱毛を安く施術を受けたいターゲットにお問い合わせを増やすため</p>
+              <h3 class="article-info-title">ターゲット</h3>
+              <p>20代以降女性</p>
+              <h3 class="article-info-title">デザインについて</h3>
+              <p>
+                脱毛の需要が多い夏向けに色は水色で透明感のあるイメージでデザインしております。医療脱毛という単語と値段が一目でわかるよう工夫しました。
+              </p>
+            </div>
+
+
+
+          <div class="home-link">
+            <div class="n-btn"><a href="index.html#works">Works一覧へ</a></div>
+          </div>
+        </div>
+      </article>
+  
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="f-nav">
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="index.html#works">WORKS</a></li>
+            <li class="footer-nav-item"><a href="index.html#skill">SKILL</a></li>
+            <li class="footer-nav-item"><a href="index.html#about">ABOUT</a></li>
+            <li class="footer-nav-item"><a href="index.html#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="copyright">&copy;Shiihara’s Portfolio</div>
+    </footer>
+    <!-- /footer -->
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+</body>
+</html>
