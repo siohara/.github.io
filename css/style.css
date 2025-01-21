@@ -581,13 +581,20 @@ a:hover::after {
 }
 
 .article-img {
-  margin-bottom: 20px;
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+.article-img img {
+  border: 1px  solid #2C3E50;
 }
 
 .article-body {
   max-width: 720px;
   margin: 0 auto;
   margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .article-info-title {
