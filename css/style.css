@@ -95,11 +95,17 @@ h2.title::before {
   margin-bottom: 30px;
 }
 
-h3{
+h3,
+.p-h3 {
   font-size: 21px;
   position: relative;
   padding: .3em 0;
 }
+
+.p-h3 {
+  text-align: center;
+}
+
 /* h3::before,
 h3::after {
   position: absolute;
@@ -322,6 +328,33 @@ a:hover::after {
   color: #fff;
 }
 
+/* 作品詳細ボタン 2カラム*/
+.demo-link {
+  display: flex;  /* 横並びにする */
+  gap: 5em;  /* ボタン間の間隔 */
+  justify-content: center;  /* 中央揃え */
+  flex-wrap: wrap; /* ボタンが多くなると自動で折り返し */
+}
+
+.demo-link > .d-btn {
+  text-align: center;  /* テキストを中央揃え */
+}
+
+/* PC版（ボタン幅を制限） */
+.demo-link > .d-btn a {
+  display: inline-block;
+  background-color: #fc6621;
+  padding: 0.5em 1em;
+  border-radius: 40px;
+  color: #fff;
+  text-align: center;
+  width: auto;
+  max-width: 250px; /* 最大幅を250pxに設定 */
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  margin-bottom: 3em;
+}
 
 /* 2カラム　共通設定 */
 .skill-list,
@@ -613,6 +646,12 @@ a:hover::after {
   text-align: center;
 }
 
+.works-c {
+  margin-bottom: 3em;
+  border-bottom: 1px solid #2C3E50;
+}
+
+
 /*media PCsize 1024
 ----------------------------------------------------*/
 @media screen and (min-width: 1024px) {
@@ -787,4 +826,23 @@ a:hover::after {
     margin-bottom: 1.5em;
   }
   
+  /* 作品詳細ボタン 2カラム*/
+  .demo-link {
+    flex-direction: column; /* ボタンを縦並びに */
+    align-items: center; /* 中央揃え */
+    gap: 0;
+  }
+
+  .demo-link > .d-btn {
+    width: 100%; /* 幅を100%にする */
+    margin: 0; /* ボタン間に間隔を追加 */
+  }
+
+  .demo-link > .d-btn a {
+    padding: 0.8em 1em; /* 高さを調整 */
+    width: auto; /* 幅をautoに戻す */
+    max-width: none; /* 最大幅の制限を解除 */
+  }
+
+
 }
